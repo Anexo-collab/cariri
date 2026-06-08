@@ -1,0 +1,288 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* BOTÃO */
+
+#darkModeBtn{
+  padding:10px 15px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* MODO ESCURO */
+
+body.dark-mode{
+  background:#121212;
+  color:#ffffff;
+}
+
+body.dark-mode .destinos{
+  background:#1a1a1a;
+}
+
+body.dark-mode .card{
+  background:#222;
+  color:white;
+}
+
+body.dark-mode .card-content p{
+  color:#ccc;
+}
+
+body.dark-mode footer{
+  background:#000;
+}
+
+body.dark-mode .header.scrolled{
+  background:#111;
+}
+
+body.dark-mode .section-title p{
+  color:#bbb;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#fff;
+  color:#222;
+}
+
+/* HEADER */
+
+.header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 60px;
+
+  z-index:1000;
+
+  transition:0.4s;
+  gap: 10px;
+}
+
+.header.scrolled{
+  background:#000000cc;
+  backdrop-filter: blur(10px);
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:30px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00d4ff;
+}
+
+.hero{
+  height:100vh;
+
+  background-image:url('Parque_Principal.jpeg');
+  background-size:cover;
+  background-position:center;
+
+  position:relative;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:white;
+  max-width:700px;
+  padding:20px;
+}
+
+.hero-content h1{
+  font-size:70px;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+.hero-content button{
+  padding:15px 35px;
+  border:none;
+  border-radius:40px;
+
+  background:#00bcd4;
+  color:white;
+
+  font-size:18px;
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.hero-content button:hover{
+  background:#0097a7;
+  transform:translateY(-3px);
+}
+
+/* SECTIONS */
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#777;
+}
+
+.light h2,
+.light p{
+  color:white;
+}
+
+/* DESTINOS */
+
+.destinos{
+  padding:100px 8%;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+.card{
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+  transition:0.4s;
+  background:white;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:25px;
+}
+
+.card-content h3{
+  margin-bottom:10px;
+}
+
+/* EXPERIÊNCIAS */
+
+.experiencias{
+  padding:100px 8%;
+  background:linear-gradient(135deg,#00796b,#004d40);
+}
+
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.experience-item{
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.2);
+  padding:50px 20px;
+  border-radius:20px;
+  text-align:center;
+  color:white;
+  backdrop-filter:blur(8px);
+  transition:0.3s;
+}
+
+.experience-item:hover{
+  transform:scale(1.05);
+  background:rgba(255,255,255,0.2);
+}
+
+/* FOOTER */
+
+footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:30px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+  .header{
+    padding:20px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero-content h1{
+    font-size:45px;
+  }
+
+  .hero-content p{
+    font-size:16px;
+  }
+
+}
+
+.Brasao{
+    width: 100px;
+    height: auto;
+}
+
+.Temperatura {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#temperatura {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+}
